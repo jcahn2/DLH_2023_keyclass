@@ -24,3 +24,5 @@ Final project for Deep Learning for Healthcare 598 class
 * Run [keyclass_mimic.py](https://github.com/jcahn2/DLH_2023_keyclass/blob/main/KeyClass/experiments/keyclass_mimic.py) from the terminal (from the KeyClass/experiments folder)
 
 [keyclass_mimic.py](https://github.com/jcahn2/DLH_2023_keyclass/blob/main/KeyClass/experiments/keyclass_mimic.py) contains all information on the preprocessing, training, pretrained models, and evaluaion code specified in the requirements. Each section is commented and highlighted.
+
+## Results
