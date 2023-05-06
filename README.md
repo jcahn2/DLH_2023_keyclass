@@ -13,3 +13,5 @@ Final project for Deep Learning for Healthcare 598 class
 * Pandas
 * Numpy
 
+## Data Download
+- Download NOTEEVENTS.csv and DIAGNOSES_ICD.csv from [MIMIC-III](https://physionet.org/content/mimiciii/1.4/)
