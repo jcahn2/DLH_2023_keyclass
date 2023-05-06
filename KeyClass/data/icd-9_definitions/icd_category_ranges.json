@@ -1,0 +1,19 @@
+{
+  "Infectious": {"min":1, "max":139},
+  "Neoplasia": {"min":140, "max":239},
+  "Endo-Immune": {"min":240, "max":279},
+  "Blood": {"min":280, "max":289},
+  "Mental": {"min":290, "max":319},
+  "Nervous": {"min":320, "max":359},
+  "Sense organs": {"min":360, "max":389},
+  "Circulatory": {"min":390, "max":459},
+  "Respiratory": {"min":460, "max":519},
+  "Digestive": {"min":520, "max":579},
+  "Genitourinary": {"min":580, "max":629},
+  "Pregnancy": {"min":630, "max":679},
+  "Skin": {"min":680, "max":709},
+  "Musculoskeletal": {"min":710, "max":739},
+  "Congenital": {"min":740, "max":759},
+  "Perinatal": {"min":760, "max":779},
+  "Injury": {"min":800, "max":899}
+}

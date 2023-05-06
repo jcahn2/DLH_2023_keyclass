@@ -1,0 +1,81 @@
+activation: torch.nn.LeakyReLU()
+average: weighted
+base_encoder: bionlp/bluebert_pubmed_mimic_uncased_L-12_H-768_A-12
+batch_size: 512
+classifier_model_lr: 0.001
+criterion: torch.nn.BCELoss(reduction='none')
+data_path: ../data/
+dataset: mimic
+device: cuda
+dropout: 0.1
+end_model_batch_size: 128
+end_model_epochs: 20
+end_model_lr: 1e-4
+end_model_patience: 3
+end_model_weight_decay: 1e-4
+h_sizes:
+- 768
+- 256
+- 64
+- 2
+h_sizes_FF:
+- 768
+- 1024
+- 512
+- 256
+- 64
+- 256
+- 512
+- 1024
+- 64
+- 17
+h_sizes_TCN:
+- 128
+- 64
+kernel_size: 3
+label_model: data_programming
+label_model_lr: 0.0001
+label_model_n_epochs: 100
+max_num: 7000
+min_df: 0.01
+model_path: ../models/mimic/
+n_bootstrap: 100
+n_classes: 17
+n_jobs: 10
+ngram_range: !!python/tuple
+- 1
+- 3
+normalize_embeddings: false
+num_TCN_channels:
+- 128
+- 64
+num_TCN_inputs: 768
+preds_path: ../results/mimic/
+q_update_interval: 50
+results_path: ../results/mimic/
+self_train_batch_size: 64
+self_train_lr: 1e-6
+self_train_patience: 3
+self_train_thresh: 1-2e-3
+self_train_weight_decay: 1e-4
+show_progress_bar: true
+target_0: tuberculosis,  found,  unspecified,  bacilli,  tubercle,  bacteriological,  examination,  histological,  specified,  sputum,  confirmed,  microscopy,  infection,  tuberculous,  due,  bacterial,  done,  unknown,  present,  animals,  inoculation,  culture,  histologically,  methods,  acute
+target_1: neoplasm,  malignant,  unspecified,  lymph,  nodes,  benign,  sites,  cell,  limb,  site,  hodgkins,  lymphoma,  skin,  carcinoma,  specified,  leukemia,  disease,  tumor,  remission,  lower,  upper,  carcinoid,  face,  situ,  neck
+target_10: unspecified,  specified,  chronic,  lesion,  female,  kidney,  acute,  glomerulonephritis,  disorders,  genital,  urinary,  cervix,  prostate,  classified,  breast,  disorder,  urethral,  renal,  elsewhere,  diseases,  tract,  disease,  bladder,  vulva,  organs
+target_11: condition,  complication,  unspecified,  antepartum,  mention,  delivered,  without,  care,  episode,  applicable,  postpartum,  pregnancy,  mother,  abortion,  labor,  complicating,  childbirth,  puerperium,  delivery,  complicated,  complications,  associated,  induced,  fetal,  specified
+target_12: due,  unspecified,  dermatitis,  ulcer,  specified,  abscess,  pressure,  cellulitis,  skin,  contact,  erythematous,  condition,  body,  surface,  percent,  involving,  carbuncle,  eczema,  exfoliation,  furuncle,  urticaria,  conditions,  hair,  erythema,  tissue
+target_13: unspecified,  region,  arthropathy,  joint,  sites,  specified,  associated,  site,  foot,  ankle,  hand,  shoulder,  upper,  pelvic,  forearm,  thigh,  lower,  arm,  leg,  multiple,  acquired,  arthritis,  diseases,  osteoarthrosis,  osteomyelitis
+target_14: congenital,  anomalies,  unspecified,  specified,  anomaly,  cleft,  complete,  deficiency,  incomplete,  longitudinal,  without,  limb,  system,  partial,  syndrome,  lip,  stenosis,  atresia,  palate,  pulmonary,  ear,  spina,  hydrocephalus,  deformities,  region
+target_15: newborn,  fetus,  grams,  fetal,  affecting,  unspecified,  malnutrition,  lightfordates,  without,  due,  mention,  neonatal,  respiratory,  hemorrhage,  maternal,  birth,  perinatal,  placenta,  gestation,  infants,  preterm,  signs,  milk,  breast,  aspiration
+target_16: open,  fracture,  unspecified,  wound,  consciousness,  closed,  intracranial,  loss,  without,  injury,  skull,  mention,  hemorrhage,  hours,  level,  laceration,  prolonged,  conscious,  return,  dislocation,  preexisting,  contusion,  cerebral,  cavity,  bones
+target_2: type,  unspecified,  diabetes,  uncontrolled,  disorders,  deficiency,  manifestations,  stated,  metabolism,  mention,  specified,  mellitus,  secondary,  ii,  juvenile,  without,  goiter,  vitamin,  disorder,  storm,  crisis,  thyrotoxic,  syndrome,  complication,  toxic
+target_3: anemia,  unspecified,  disease,  deficiency,  specified,  thalassemia,  anemias,  crisis,  blood,  hemolytic,  sicklecell,  neutropenia,  congenital,  due,  iron,  secondary,  chronic,  hereditary,  thrombocytopenia,  without,  hemorrhagic,  disorder,  purpura,  white,  factor
+target_4: disorder,  unspecified,  type,  episode,  remission,  dependence,  schizophrenia,  abuse,  specified,  bipolar,  drug,  acute,  disorders,  current,  chronic,  psychotic,  episodic,  manic,  affective,  recent,  depressive,  continuous,  conduct,  subchronic,  personality
+target_5: migraine,  without,  unspecified,  intractable,  mention,  status,  migrainosus,  elsewhere,  classified,  epilepsy,  sleep,  cerebral,  stated,  diseases,  nerve,  disorder,  aura,  headache,  meningitis,  syndrome,  due,  affecting,  disorders,  side,  chronic
+target_6: unspecified,  eye,  vision,  impairment,  disorders,  retinal,  corneal,  glaucoma,  acute,  associated,  loss,  ear,  chronic,  otitis,  eyelid,  cataract,  disorder,  body,  visual,  optic,  hearing,  media,  better,  specified,  lesser
+target_7: unspecified,  disease,  heart,  chronic,  acute,  infarction,  artery,  embolism,  thrombosis,  kidney,  stage,  failure,  venous,  cerebrovascular,  without,  episode,  care,  effects,  cerebral,  late,  myocardial,  hypertensive,  atherosclerosis,  syndrome,  aneurysm
+target_8: due,  pneumonia,  acute,  unspecified,  chronic,  respiratory,  influenza,  pulmonary,  lung,  asthma,  virus,  sinusitis,  bronchitis,  larynx,  classified,  obstruction,  diseases,  elsewhere,  manifestations,  disease,  identified,  pneumonitis,  interstitial,  without,  allergic
+target_9: unspecified,  obstruction,  without,  mention,  hemorrhage,  ulcer,  chronic,  acute,  perforation,  hernia,  specified,  gangrene,  cholecystitis,  intestine,  gastric,  site,  teeth,  recurrent,  gallbladder,  dental,  jaw,  calculus,  duodenal,  anomalies,  peptic
+topk: 30
+use_custom_encoder: true
+use_noise_aware_loss: true
