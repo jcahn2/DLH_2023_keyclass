@@ -511,7 +511,7 @@ def main():
 
         write_to_csv(tcn_scores,ff_scores, outputs[i])
 
-        print('yay everything works')
+        print('PROCESS COMPLETE')
     
 if __name__ == "__main__":
     main()
